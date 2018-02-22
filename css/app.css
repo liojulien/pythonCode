@@ -1,0 +1,53 @@
+html {
+    box-sizing: border-box;
+    height: 100%;
+}
+p {
+  background-color: #ffe3cc;
+}
+
+
+body {
+    display: flex;
+    margin: 0;
+    height: 100%;
+}
+
+.container {
+    margin: auto;
+    padding: 1em;
+    width: 80%;
+}
+
+.python-code-examples {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+}
+
+.python-code-examples {
+    background: #03a9f4;
+    box-shadow: 0 1px 9px 0 rgba(0, 0, 0, 0.4);
+    color: black;
+    margin: 0.5em;
+    min-height: 250px;
+    min-width: 100
+    flex: 0 1 200px;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    text-align: left;
+}
+
+
+
+
+#cypher {
+    background-color: #3ee2ff;
+}
+#shuffle {
+    background-color: #ddc4fc;
+}
+#remove_string {
+  background-color: #ffe3cc;
+}

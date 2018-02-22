@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Python Code</title>
+    <meta name="Python Coding" content="">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="python-code-examples">
+            <div class="python-code-examples" id="cypher">
+<p>
+<b><u>Cypher Code:</u></b><br>
+#Program to encrypt or to decrypt a user input message<br>
+message = input("Enter message: ")<br>
+key = int(input("Enter key value: "))<br>
+mode = input("Choose encryption mode: ")<br>
+LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'<br>
+translated = ''<br>
+message = message.upper()<br>
+
+for symbol in message:<br>
+    &ensp;&ensp;if symbol in LETTERS:<br>
+        &ensp;&ensp;&ensp;&ensp;num = LETTERS.find(symbol)<br>
+        &ensp;&ensp;&ensp;&ensp;if mode == 'encrypt':<br>
+            &ensp;&ensp;&ensp;&ensp;&ensp;num = num + key<br>
+            &ensp;&ensp;&ensp;&ensp;&ensp;if num >= len(LETTERS):<br>
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;num = num - len(LETTERS)<br>
+        &ensp;&ensp;&ensp;&ensp;elif mode == 'decrypt':<br>
+            &ensp;&ensp;&ensp;&ensp;&ensp;num = num - key<br>
+            &ensp;&ensp;&ensp;&ensp;&ensp;if num >= len(LETTERS):<br>
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;num = num - len(LETTERS)<br>
+            &ensp;&ensp;&ensp;&ensp;&ensp;elif num < 0:<br>
+                &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;num = num + len(LETTERS)<br>
+        &ensp;&ensp;&ensp;&ensp;translated = translated + LETTERS[num]<br>
+    &ensp;&ensp;else:<br>
+        &ensp;&ensp;&ensp;&ensp;translated = translated + symbol<br>
+print(translated)</p>
+
+            </div>
+            <div class="python-code-examples" id="shuffle">
+                <p>
+              <b>Shuffle Code</b><br>
+userMessage = input("Enter msg: ")<br>
+shiftValue = int(input("Enter a shift value: "))<br>
+encryptedMsg = ""<br>
+for character in userMessage:<br>
+&ensp;&ensp;&ensp;    if character.isalpha() == True:<br>
+      &ensp;&ensp;&ensp;&ensp;&ensp;  x = ord(character)<br>
+      &ensp;&ensp;&ensp;&ensp;&ensp;  x += shiftValue<br>
+        &ensp;&ensp;&ensp;&ensp;&ensp;encryptedMsg += chr(x)<br>
+    &ensp;&ensp;&ensp;else:<br>
+        &ensp;&ensp;&ensp;&ensp;&ensp;encryptedMsg += character<br>
+print("Encrypted message is: ",encryptedMsg)<br>
+            </p>
+            </div>
+            <div class="python-code-examples" id="remove_string">
+                <p>
+                  <b><u>Remove String:</u></b><br>
+                  -------------------------------------------------------------<br>
+                  <b>def</b>&ensp;&ensp;remove(somestring,sub):<br>
+                  &ensp;&ensp;&ensp;"""Return a string with sub removed."""<br>
+                  &ensp;&ensp;location = somestring.find(sub)<br>
+                  &ensp;&ensp;length = len(sub)<br>
+                  &ensp;&ensp;part_before = somestring[:location]<br>
+                  &ensp;&ensp;part_after = somestring[location + length:]<br>
+                  &ensp;&ensp;return part_before + part_after<br>
+                  print remove("audacity","a")<br>
+                  -------------------------------------------------------------
+
+
+                  </p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
